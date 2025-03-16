@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Driver Assistance System</title>
+    <link rel="stylesheet" href="dha.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="https://cdn.socket.io/4.0.1/socket.io.min.js"></script> <!-- Include Socket.IO library -->
+</head>
+<body>
+    <header>
+        <h1>Smart Driver Assistance System</h1>
+        <nav>
+            <ul>
+                <li><a href="#dashboard">Dashboard</a></li>
+                <li><a href="#drowsiness">Drowsiness Detection</a></li>
+                <li><a href="#blindspot">Blind Spot Monitoring</a></li>
+                <li><a href="#location">Location Tracking</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="dashboard">
+        <h2>Dashboard</h2>
+        <div id="status">
+            <p><strong>Driver Status:</strong> <span id="driverStatus">Normal</span></p>
+            <p><strong>Speed:</strong> <span id="vehicleSpeed">80 km/h</span></p>
+            <p><strong>Location:</strong> <span id="vehicleLocation">Lat: 0.0000, Long: 0.0000</span></p>
+        </div>
+    </section>
+
+    <section id="drowsiness">
+        <h2>Drowsiness Detection</h2>
+        <div id="drowsinessStatus">
+            <p><strong>Eye Status:</strong> <span id="eyeStatus">Open</span></p>
+            <p><strong>Drowsiness Level:</strong> <span id="drowsinessLevel">Low</span></p>
+        </div>
+        <div id="drowsinessAlert">
+            <p><strong>Alert:</strong> <span id="drowsinessAlertMessage" style="color: green;">No Alert</span></p>
+        </div>
+    </section>
+
+    <section id="blindspot">
+        <h2>Blind Spot Monitoring</h2>
+        <div id="blindSpotStatus">
+            <p><strong>Blind Spot Status:</strong> <span id="blindSpotDetection">Clear</span></p>
+        </div>
+    </section>
+
+    <section id="location">
+        <h2>Vehicle Location</h2>
+        <div id="map"></div>
+    </section>
+
+    <footer>
+        <p>© 2024 Smart Driver Assistance System</p>
+    </footer>
+
+    <script src="dha.js"></script>
+</body>
+</html>

@@ -1,0 +1,160 @@
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    transition: background-color 0.3s ease;
+}
+
+header {
+    margin-top: 10px;
+    background-color: #007B7F;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+    transition: font-size 0.3s ease;
+}
+
+nav ul {
+    list-style: none;
+    padding-top: 5px;
+    padding: 0;
+    margin: 10px;
+ 
+}
+
+nav ul li {
+    
+    display: inline;
+    margin-right: 10px;
+    transition: transform 0.3s ease;
+}
+
+nav ul li:hover, nav ul li:active {
+    transform: scale(1.05);
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav ul li a:hover, nav ul li a:active {
+    background-color: #d9866c; /* Change background color on hover/touch */
+    color: #fff; /* Change text color */
+    border-radius: 4px;
+}
+
+section {
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+    transition: padding 0.3s ease;
+}
+
+#status, #drowsinessStatus, #blindSpotStatus {
+    background-color: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+#status:hover, #status:active, 
+#drowsinessStatus:hover, #drowsinessStatus:active, 
+#blindSpotStatus:hover, #blindSpotStatus:active {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    transform: translateY(-5px);
+    background-color: #91c1c2; /* Change background color on touch/hover */
+}
+
+#map {
+    width: 100%;
+    height: 400px;
+    background-color: #ccc;
+    margin-bottom: 20px;
+    transition: height 0.3s ease;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+footer:hover, footer:active {
+    background-color: #91c1c2; /* Change footer background on touch/hover */
+}
+
+/* Responsive Media Queries */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+    
+    nav ul li {
+        display: block;
+        text-align: center;
+    }
+
+    nav ul li a {
+        font-size: 1.2rem;
+    }
+
+    section {
+        padding: 15px;
+    }
+
+    #status, #drowsinessStatus, #blindSpotStatus {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+
+    #map {
+        height: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    nav ul li a {
+        font-size: 1rem;
+        padding: 8px;
+    }
+
+    section {
+        padding: 10px;
+    }
+
+    #status, #drowsinessStatus, #blindSpotStatus {
+        font-size: 0.8rem;
+    }
+
+    #map {
+        height: 250px;
+    }
+
+    footer {
+        font-size: 0.9rem;
+    }
+}

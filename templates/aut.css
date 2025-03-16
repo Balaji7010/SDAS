@@ -1,0 +1,153 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #3BC8C8, #0C2B5B); /* Soft teal to navy gradient */
+    height: 100vh;
+    display: flex;
+    flex-direction: column; /* Stack header and container vertically */
+    justify-content: center;
+    align-items: center;
+}
+
+.system-header {
+    text-align: center;
+    margin-top: 15px;
+    padding: 20px;
+    background-color: #0C2B5B; /* Dark navy */
+    color: #E0E0E0; /* Light gray text */
+    font-size: 30px; /* No rem */
+    font-family: Arial, sans-serif;
+    width: 100%; /* Full width */
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1; /* Take remaining space */
+}
+
+.login-box {
+    background-color: white;
+    padding: 50px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 10px solid #ccc; /* Light gray border */
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-size: 24px; /* Changed from rem to px */
+    color: #333;
+}
+
+.input-group {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px; /* Changed from rem to px */
+    color: #666;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px; /* Changed from rem to px */
+    transition: border-color 0.3s;
+}
+
+.input-group input:focus {
+    border-color: #3BC8C8; /* Teal focus border */
+}
+
+.error-message {
+    color: red;
+    font-size: 12px; /* Changed from rem to px */
+    display: none;
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+    font-size: 14px; /* Changed from rem to px */
+}
+
+.remember-me input {
+    margin-right: 10px; /* Fixed margin for remember me checkbox */
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #007B7F; /* Dark teal */
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px; /* Changed from rem to px */
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.reset-btn{
+    margin-top: 5px;
+}
+
+button:hover {
+    background-color: #009A9D; /* Medium teal on hover */
+}
+
+.forgot-password {
+    margin-top: 10px;
+    font-size: 14px; /* Changed from rem to px */
+}
+
+.forgot-password a {
+    color: #3BC8C8; /* Teal link color */
+    text-decoration: none;
+}
+
+.forgot-password a:hover {
+    text-decoration: underline;
+}
+
+.social-login {
+    margin-top: 20px;
+    font-size: 14px; /* Changed from rem to px */
+}
+
+.social-login p {
+    margin-bottom: 10px;
+}
+
+.social-btn {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+}
+
+.google {
+    background-color: #db4a39; /* Google red */
+    color: white;
+}
+
+.google:hover {
+    background-color: #c23321; /* Darker red on hover */
+}

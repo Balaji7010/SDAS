@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="aut.css">
+    <script type="module" src="aut.js" defer></script>
+</head>
+<body>
+    <header class="system-header">
+        <h1>Smart Driver Assistance System</h1>
+    </header>
+    
+    <div class="login-container">
+        <div class="login-box">
+            <h2>Login</h2>
+            <form id="loginForm">
+                <div class="input-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                    <span class="error-message" id="emailError"></span>
+                </div>
+                
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                    <span class="error-message" id="passwordError"></span>
+                </div>
+                
+                <div class="remember-me">
+                    <input type="checkbox" id="rememberMe" name="rememberMe">
+                    <label for="rememberMe">Remember Me</label>
+                </div>
+                
+                <button type="submit">Login</button>
+                <button type="button" class="reset-btn" onclick="resetForm()">Reset</button>
+                
+                <div class="forgot-password">
+                    <a href="#">Forgot Password?</a>
+                </div>
+            </form>
+
+            <div class="social-login">
+                <p>Or login with</p>
+                <button id="googleSignInBtn" class="social-btn google">Login with Google</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Firebase SDKs -->
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-auth.js"></script>
+    <!-- Your custom JavaScript -->
+    <script src="aut.js" type="module"></script>
+    
+    <script>
+        function resetForm() {
+            document.getElementById('loginForm').reset();
+            document.getElementById('emailError').textContent = ''; // Clear error message
+            document.getElementById('passwordError').textContent = ''; // Clear error message
+        }
+    </script>
+</body>
+</html>
