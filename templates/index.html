@@ -106,7 +106,7 @@
         const firestore = firebase.firestore();
 
         function fetchFirestoreData() {
-            firestore.collection("status").doc("driver_status")
+            firestore.collection("driver_status").doc("current_status")
                 .onSnapshot((doc) => {
                     if (doc.exists) {
                         const data = doc.data();
@@ -116,7 +116,7 @@
                     }
                 });
 
-            firestore.collection("status").doc("current_status")
+            firestore.collection("driver_status").doc("current_status")
                 .onSnapshot((doc) => {
                     if (doc.exists) {
                         const data = doc.data();
